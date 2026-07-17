@@ -22,9 +22,15 @@
 
 #about-page .top-grid{
     display:grid;
-    grid-template-columns:140px 1fr 140px;
+    grid-template-columns:1fr;
     gap:8px;
     margin-bottom:8px;
+}
+
+@media (min-width:768px){
+    #about-page .top-grid{
+        grid-template-columns:140px 1fr 140px;
+    }
 }
 
 /* BOXES */
@@ -118,10 +124,16 @@
     overflow-x:hidden;
 
     display:grid;
-    grid-template-columns:repeat(4,1fr);
+    grid-template-columns:repeat(2,1fr);
 
     gap:4px;
     padding:6px;
+}
+
+@media (min-width:768px){
+    #about-page .gallery-scroll{
+        grid-template-columns:repeat(4,1fr);
+    }
 }
 
 #about-page .archive-photo{
