@@ -1,0 +1,182 @@
+/* ONLY ABOUT TAB */
+
+#tab3{
+    overflow-y:auto;
+    height:100%;
+}
+
+#about-page{
+    padding:8px;
+    color:#8db5ef;
+}
+
+/* TITLE */
+
+#about-page .about-title{
+    font-size:20px;
+    margin-bottom:8px;
+    color:#7ea8e8;
+}
+
+/* TOP SECTION */
+
+#about-page .top-grid{
+    display:grid;
+    grid-template-columns:140px 1fr 140px;
+    gap:8px;
+    margin-bottom:8px;
+}
+
+/* BOXES */
+
+#about-page .cyber-box{
+    border:1px solid #d9ebff;
+    background:#fdfefe;
+    color:#8db5ef;
+}
+
+/* KEEP FILE-EXPLORER STYLE */
+
+#about-page .widget-header{
+    background:#eef6ff;
+    border-bottom:1px solid #d9ebff;
+    padding:3px 6px;
+    font-weight:bold;
+    color:#7ea8e8;
+}
+
+/* SEPARATE SCROLL AREAS */
+
+#about-page .widget-content{
+    height:120px;
+    overflow-y:auto;
+    overflow-x:hidden;
+    padding:6px;
+
+    color:#8db5ef;
+
+    font-size:11px;
+    line-height:1.4;
+}
+
+#about-page .about-scroll{
+    height:120px;
+    overflow-y:auto;
+    overflow-x:hidden;
+    padding:6px;
+
+    color:#8db5ef;
+}
+
+/* LINKS */
+
+#about-page a{
+    color:#8db5ef;
+    text-decoration:none;
+}
+
+#about-page a:visited{
+    color:#8db5ef;
+}
+
+#about-page a:hover{
+    color:#b7d2f7;
+}
+
+/* STAMPS */
+
+#about-page .stamp-marquee{
+    height:60px;
+    overflow:hidden;
+}
+
+#about-page .stamp-track{
+    display:flex;
+    width:max-content;
+    animation:aboutscroll 20s linear infinite;
+}
+
+#about-page .stamp-track img{
+    height:58px;
+}
+
+@keyframes aboutscroll{
+    from{transform:translateX(0);}
+    to{transform:translateX(-50%);}
+}
+
+/* GALLERY */
+
+#about-page .gallery-box{
+    margin-top:8px;
+}
+
+#about-page .gallery-scroll{
+    height:350px;
+
+    overflow-y:auto;
+    overflow-x:hidden;
+
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+
+    gap:4px;
+    padding:6px;
+}
+
+#about-page .archive-photo{
+    overflow:hidden;
+}
+
+#about-page .archive-photo img{
+    width:100%;
+    display:block;
+}
+
+/* ==========================
+   ABOUT TAB SCROLLBARS ONLY
+========================== */
+
+#tab3::-webkit-scrollbar,
+#tab3 .widget-content::-webkit-scrollbar,
+#tab3 .about-scroll::-webkit-scrollbar,
+#tab3 .gallery-scroll::-webkit-scrollbar{
+    width:8px;
+}
+
+#tab3::-webkit-scrollbar-track,
+#tab3 .widget-content::-webkit-scrollbar-track,
+#tab3 .about-scroll::-webkit-scrollbar-track,
+#tab3 .gallery-scroll::-webkit-scrollbar-track{
+    background:#f8fbff;
+}
+
+#tab3::-webkit-scrollbar-thumb,
+#tab3 .widget-content::-webkit-scrollbar-thumb,
+#tab3 .about-scroll::-webkit-scrollbar-thumb,
+#tab3 .gallery-scroll::-webkit-scrollbar-thumb{
+    background:#d4e5ff;
+    border:1px solid #eef6ff;
+    border-radius:2px;
+}
+
+#tab3::-webkit-scrollbar-thumb:hover,
+#tab3 .widget-content::-webkit-scrollbar-thumb:hover,
+#tab3 .about-scroll::-webkit-scrollbar-thumb:hover,
+#tab3 .gallery-scroll::-webkit-scrollbar-thumb:hover{
+    background:#c5dbff;
+}
+
+#tab3::-webkit-scrollbar-button,
+#tab3 .widget-content::-webkit-scrollbar-button,
+#tab3 .about-scroll::-webkit-scrollbar-button,
+#tab3 .gallery-scroll::-webkit-scrollbar-button{
+    display:none;
+}
+
+#tab3::-webkit-scrollbar-corner,
+#tab3 .widget-content::-webkit-scrollbar-corner,
+#tab3 .about-scroll::-webkit-scrollbar-corner,
+#tab3 .gallery-scroll::-webkit-scrollbar-corner{
+    background:#ffffff;
+}

@@ -1,0 +1,1672 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>bluefuture - wip</title>
+<link rel="icon" type="image/x-icon" href="https://file.garden/aeJQnJpyajBfOnje/Untitled58_20260515201307.PNG">
+<link rel="stylesheet" href="about.css">
+<link rel="stylesheet" href="yuri.css">
+</head>
+<body>
+
+<style>
+/* ====== GLOBAL ====== */
+body {
+  background: #f0f8ff;
+  color: #0a1f3b;
+  font-family: "MS PGothic", monospace;
+  margin: 0;
+}
+
+/* links */
+a {
+  color: #5da9ff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-shadow: 0 0 5px #5da9ff;
+}
+
+/* ====== MAIN LAYOUT ====== */
+#container {
+  display: grid;
+  grid-template-columns: 220px 1fr 220px;
+  min-height: 100vh;
+}
+
+/* sidebar */
+#sidebar {
+  background: #e6f2ff;
+  border-right: 1px solid #a3c4ff;
+  padding: 15px;
+  overflow-y: auto;
+}
+
+/* main */
+#content {
+  padding: 20px;
+  overflow-y: auto;
+}
+
+/* right */
+#rightbar {
+  background: #e6f2ff;
+  border-left: 1px solid #a3c4ff;
+  padding: 15px;
+  overflow-y: auto;
+}
+
+/* ====== WINDOW ====== */
+.window {
+  background: rgba(255,255,255,0.8);
+  border: 1px solid #a3c4ff;
+  box-shadow: 0 0 10px #cce0ff inset;
+  margin-bottom: 20px;
+}
+
+.window-header {
+  background: #d0e6ff;
+  padding: 5px;
+  font-size: 12px;
+  border-bottom: 1px solid #a3c4ff;
+}
+
+/* ====== TABS ====== */
+.tabs {
+  display: flex;
+  gap: 5px;
+  margin-bottom: 10px;
+}
+
+.tab-button {
+  background: #d0e6ff;
+  border: 1px solid #a3c4ff;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.tab-button.active {
+  background: #a3c4ff;
+  color: white;
+}
+
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+/* ====== DECOR ====== */
+.glow {
+  text-shadow: 0 0 8px #5da9ff;
+}
+
+.small {
+  font-size: 11px;
+  opacity: 0.7;
+}
+
+.blinkie-box {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.blinkie {
+  height: 20px;
+}
+
+/* fix iframe */
+iframe {
+  width: 100%;
+  height: 180px;
+}
+
+/* blinkies */
+.blinkies {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+  justify-items: center;
+  padding: 10px;
+}
+
+.blinkies a {
+  width: 100%;
+  max-width: 88px;
+  height: 31px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.blinkies img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+  image-rendering: pixelated;
+}
+
+#news {
+  color: #5C5C5C;
+  text-shadow: 0rem 0rem 0.500rem #00000040;
+  font-family: "Courier New", monospace;
+  letter-spacing: 0.5px;
+  display: block;
+  margin-bottom: 8px;
+}
+</style>
+
+
+<div id="container">
+
+<!-- SIDEBAR -->
+<div id="sidebar">
+
+  <div class="window" style="font-size: 13px;">
+    <div class="window-header">NAV.exe</div>
+    <p><a href="about.html">home</a></p>
+    <p><a href="fav.html">favourite characters</a></p>
+    <p><a href="resources.html">resources</a></p>
+    <p><a href="blog.html">blog</a></p>
+    <p><a href="index.html">reboot</a></p>
+  </div>
+
+  <div class="window">
+    <div class="window-header">status.log</div>
+
+    <p style="font-size:10px;">feeling::</p>
+
+    <div class="imood">
+      <a href="https://www.imood.com/users/jelly_angel">
+        <img src="https://moods.imood.com/display/uname-jelly_angel/trans-1/imood.gif"
+             alt="The current mood of jelly_angel at www.imood.com"
+             border="0">
+      </a>
+
+      <p style="font-size:10px;">status::</p>
+      <div id="statuscafe"><div id="statuscafe-username"></div>
+      <br>
+      <div id="statuscafe-content"></div>
+      </div><script src="https://status.cafe/current-status.js?name=jellii" defer></script>
+      <br>
+    </div>
+  </div>
+
+ <div class="window">
+  <div class="window-header">coolwebsites.exe</div>
+
+  <div class="blinkies">
+
+     <a href="https://tenshinlight.nekoweb.org/">
+      <img src="https://file.garden/aeJQnJpyajBfOnje/button2.png" alt="tenshinlight">
+    </a>
+    
+    
+    <a href="https://tectrix.neocities.org/" target="_blank">
+      <img src="https://file.garden/aeJQnJpyajBfOnje/button%20(2).gif" alt="tectrix">
+    </a>
+    
+    <a href="https://psyker-online.neocities.org/" target="_blank">
+      <img src="https://file.garden/aeJQnJpyajBfOnje/psyker-online%20button.gif" alt="psyker-online">
+    </a>
+    
+    <a href="https://mikufan3939.neocities.org/home" target="_blank">
+      <img src="https://file.garden/aeJQnJpyajBfOnje/mikuhell2.png" alt="mikufan3939">
+    </a>
+    
+    <a href="https://oyasumimi.neocities.org/" target="_blank">
+      <img src="https://file.garden/aeJQnJpyajBfOnje/oyasumimi.gif" alt="oyasumimi25">
+    </a>
+    
+    <a href="https://rice.place/" target="_blank">
+      <img src="https://file.garden/aeJQnJpyajBfOnje/website%20stamps/riceticket.gif">
+    </a>
+    
+    <a href="https://aoki553.nekoweb.org/" target="_blank">
+      <img src="https://file.garden/aeJQnJpyajBfOnje/aoki553button.gif" alt="aoki553">
+    </a>
+    
+    <a href="https://nukochannel.neocities.org" target="_blank">
+      <img src="https://file.garden/aeJQnJpyajBfOnje/website%20stamps/NukoChannelButton.gif">
+    </a>
+    
+    <a href="https://00s.neocities.org/" target="_blank">
+      <img src="https://file.garden/aeJQnJpyajBfOnje/button%20(1).gif" alt="00s">
+    </a>
+    
+    <a href="https://yumejoshi.nekoweb.org/">
+      <img src="https://file.garden/aeJQnJpyajBfOnje/website%20stamps/IMG_6566.jpeg">
+    </a>
+    
+
+    <a href="https://electric-tenshi.nekoweb.org/" target="_blank">
+      <img src="https://file.garden/aeJQnJpyajBfOnje/website%20stamps/wvdtkw.gif">
+    </a>
+
+
+    <a href="https://bandaid91.neocities.org">
+      <img src="https://files.catbox.moe/u2t9c6.gif" alt="bandaid91">
+    </a>
+
+    <a href="https://slushienova.neocities.org">
+      <img src="https://file.garden/aeJQnJpyajBfOnje/slush.jpg" alt="slush">
+    </a>
+    
+    <a href="https://nukocities.neocities.org/">
+      <img src="https://file.garden/aeJQnJpyajBfOnje/nukocities.gif" alt="nukocities">
+    </a>
+
+    <a href="https://jamverse.neocities.org/" target="_blank">
+      <img src="https://file.garden/aeJQnJpyajBfOnje/IMG_1998.gif">
+    </a>
+
+    <a href="https://unicodeangel.neocities.org">
+      <img src="https://file.garden/aeJQnJpyajBfOnje/UnicodeAngelButton2.gif" alt="unicodeangel">
+    </a>
+    
+    <a href="https://dazaisfunpalace.nekoweb.org/">
+      <img src="https://file.garden/aeJQnJpyajBfOnje/dazaisfunplace.gif" alt="dazaisfunplace">
+    </a>
+    
+     <a href="https://alicesdumbstuff.neocities.org/">
+      <img src="https://files.catbox.moe/pg060f.gif" alt="alicesdumbstuff">
+    </a>
+    
+    <a href="https://moondancer.nekoweb.org/">
+      <img src="https://file.garden/aeJQnJpyajBfOnje/button.gif" alt="moondancer">
+    </a>
+    
+    <a href="https://lolv66.neocities.org/">
+      <img src="https://file.garden/aeJQnJpyajBfOnje/button2.gif" alt="lolv66">
+    </a>
+    
+    <a href="https://izzzyzzz.neocities.org/" target="_blank">
+      <img src="https://file.garden/aeJQnJpyajBfOnje/Izzzyzzz-Button.gif" alt="izzzyzzz">
+    </a>
+    
+    <a href="https://miniwildpanda.neocities.org/" target="_blank">
+      <img src="https://file.garden/aeJQnJpyajBfOnje/website%20stamps/mybutton.gif">
+    </a>
+    
+    <a href="https://leafyyy.neocities.org/" target="_blank">
+      <img src="https://file.garden/aeJQnJpyajBfOnje/leafy_88x31.gif" alt="leafy.exe">
+    </a>
+
+
+  </div>
+</div>
+
+<style>
+
+.window .blinkies {
+  height: 140px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  padding: 4px;
+}
+
+
+.window .blinkies img {
+  margin: 2px;
+}
+
+
+.window .blinkies::-webkit-scrollbar {
+  width: 17px;
+}
+
+.window .blinkies::-webkit-scrollbar-track {
+  background: #eef4ff;
+}
+
+.window .blinkies::-webkit-scrollbar-thumb {
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-color: #c8d6fb;
+  background-size: 7px;
+  border: 1px solid #fff;
+  border-radius: 2px;
+  box-shadow: inset -3px 0 #bad1fc, inset 1px 1px #b7caf5;
+}
+
+.window .blinkies::-webkit-scrollbar-thumb:vertical {
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 -0.5 7 8' shape-rendering='crispEdges'%3E%3Cpath stroke='%23eef4fe' d='M0 0h6M0 2h6M0 4h6M0 6h6'/%3E%3Cpath stroke='%23bad1fc' d='M6 0h1M6 2h1M6 4h1'/%3E%3Cpath stroke='%23c8d6fb' d='M0 1h1M0 3h1M0 5h1M0 7h1'/%3E%3Cpath stroke='%238cb0f8' d='M1 1h6M1 3h6M1 5h6M1 7h6'/%3E%3Cpath stroke='%23bad3fc' d='M6 6h1'/%3E%3C/svg%3E");
+}
+</style>
+
+</div>
+
+
+<!-- MAIN CONTENT -->
+<div id="content">
+
+  <div class="window">
+
+    <div class="window-header">system://home</div>
+
+    <div class="tabs">
+      <div class="tab-button active" onclick="openTab('tab1', this)">main</div>
+      <div class="tab-button" onclick="openTab('tab2', this)">changelog</div>
+      <div class="tab-button" onclick="openTab('tab3', this)">about</div>
+      <div class="tab-button" onclick="openTab('tab4', this)">guestbook</div>
+    </div>
+
+    <!-- TAB 1 -->
+    <div id="tab1" class="tab-content active">
+
+      <div style="
+        font-family: 'Courier New', monospace;
+        background: #f7fbff;
+        color: #6fa8dc;
+        padding: 20px;
+        display:flex;
+        justify-content:center;
+      ">
+
+      <div style="
+        font-family:'Courier New', monospace;
+        background:#f7fbff;
+        color:#6fa8dc;
+        padding:0;
+        margin:0;
+        width:100%;
+      ">
+
+      <!-- HEADER -->
+      <div style="margin-bottom:14px;">
+        <div style="font-size:28px; color:#6fa8dc;">
+          jelli
+        </div>
+
+        <div style="font-size:12px; color:#9fc5e8;">
+          no 1 trace note hater
+        </div>
+      </div>
+
+      <!-- STATUS -->
+<div style="
+  padding: 8px;
+  border: 1px solid #e3f2ff;
+  background: #ffffff;
+  font-size: 12px;
+  color: #9fc5e8;
+  margin-bottom: 12px;
+  overflow: hidden; /* Hides text that goes outside the borders */
+  user-select: none;
+">
+  <!-- Animated Text -->
+  <div style="
+    display: flex;
+    gap: 4rem; 
+    width: max-content;
+    animation: statusScroll 10s linear infinite;
+  ">
+    <span>wip and will be for the rest of eternity</span>
+    <span aria-hidden="true">wip and will be for the rest of eternity</span>
+  </div>
+</div>
+
+<style>
+  @keyframes statusScroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(calc(-50% - 2rem)); } 
+  }
+</style>
+
+
+      <!-- GRID -->
+      <div style="display:flex; gap:12px;">
+
+        <!-- LEFT -->
+        <div style="width:280px; display:flex; flex-direction:column; gap:12px;">
+
+          <div style="
+            padding:10px;
+            border:1px solid #e3f2ff;
+            background:#ffffff;
+          ">
+            <img src="https://file.garden/aeJQnJpyajBfOnje/Untitled167_20260621150546.PNG" width="250">
+
+
+            <div style="font-size:11px; margin-top:6px; color:#9fc5e8;">
+              placeholder ....
+            </div>
+          </div>
+
+          <div style="
+            padding:10px;
+            border:1px solid #e3f2ff;
+            background:#ffffff;
+            font-size:12px;
+            line-height:1.6;
+          ">
+            <b style="color:#6fa8dc;">likes</b><br>
+            noodles<br>
+            rain<br>
+
+            <div>
+              <a href="https://aesthetics.fandom.com/wiki/Mizuiro" target="_blank" rel="noopener noreferrer">miziuro kei /</a>
+              <a href="https://j-fashion.fandom.com/wiki/Shironuri" target="_blank" rel="noopener noreferrer"> shironuri</a>
+            </div>
+
+          </div>
+
+          <div style="
+            padding:10px;
+            border:1px solid #e3f2ff;
+            background:#ffffff;
+            font-size:12px;
+            line-height:1.6;
+          ">
+            <b style="color:#6fa8dc;">friends</b><br>
+            <a href="https://susurrusdarling.straw.page/" target="_blank" rel="noopener noreferrer">x san</a><br>
+            .
+          </div>
+
+        </div>
+
+        <!-- RIGHT -->
+        <div style="flex:1; display:flex; flex-direction:column; gap:12px;">
+
+          <div style="
+            padding:12px;
+            border:1px solid #e3f2ff;
+            background:#ffffff;
+            font-size:12px;
+            line-height:1.7;
+          ">
+            <b style="color:#6fa8dc;">about me</b><br><br>
+            jellyfish / robot<br>
+            i made this as an intrusive thought<br><img src="https://file.garden/aeJQnJpyajBfOnje/1e0948bf_original.gif" alt="nuko divider"><br>
+            i have decided to embrace my inner gacha life kid
+          </div>
+
+          <div style="
+            padding:12px;
+            border:1px solid #e3f2ff;
+            background:#ffffff;
+            font-size:12px;
+            line-height:1.7;
+          ">
+            <b style="color:#6fa8dc;">intrests</b><br>
+            ⌖ coding<br>
+            ⌖ vkei <br>
+            ⌖ crafting/oshikatsu<br>
+            ⌖ old web
+          </div>
+
+          <!-- MUSIC -->
+          <div style="
+            padding:12px;
+            border:1px solid #e3f2ff;
+            background:#ffffff;
+            font-size:12px;
+          ">
+            <img src="https://file.garden/aeJQnJpyajBfOnje/cat32.gif" alt="nuko music"> <a href="https://open.spotify.com/track/2CUSY8VNXKmwYvO0IUgVzl?si=183ff377eba542f0" target="_blank" style="color:#6fa8dc; text-decoration:none;">
+            ギルティ・プレジャー・プレジャー - Sick2
+            </a><br><br>
+
+            <audio id="music">
+              <source src="https://file.garden/aeJQnJpyajBfOnje/%E3%82%AE%E3%83%AB%E3%83%86%E3%82%A3%E3%83%BB%E3%83%97%E3%83%AC%E3%82%B8%E3%83%A3%E3%83%BC%E3%83%BB%E3%83%97%E3%83%AC%E3%82%B8%E3%83%A3%E3%83%BC" type="audio/mpeg">
+            </audio>
+
+            <button onclick="playMusic()"
+              style="
+                background:#ffffff;
+                border:1px solid #cfe8ff;
+                color:#6fa8dc;
+                padding:5px 10px;
+                font-size:12px;
+                cursor:pointer;
+              ">
+              play
+            </button>
+
+            <button onclick="stopMusic()"
+              style="
+                background:#ffffff;
+                border:1px solid #cfe8ff;
+                color:#6fa8dc;
+                padding:5px 10px;
+                font-size:12px;
+                cursor:pointer;
+                margin-left:5px;
+              ">
+              stop
+            </button>
+
+          </div>
+
+         <!-- CALENDAR + TODO -->
+<div style="
+  margin-top:12px;
+  padding:12px;
+  border:1px solid #e3f2ff;
+  background:#ffffff;
+  font-size:12px;
+">
+
+  <div style="
+    display:flex;
+    gap:12px;
+    align-items:flex-start;
+    flex-wrap:wrap;
+  ">
+
+    <!-- CALENDAR -->
+    <div style="
+      margin-top:4px;
+      padding:4px;
+      border:1px solid #e3f2ff;
+      background:#ffffff;
+      font-size:10px;
+      line-height:1;
+      max-width:160px;
+      width:160px;
+    ">
+
+      <div style="
+        color:#6fa8dc;
+        margin-bottom:2px;
+        display:flex;
+        justify-content:space-between;
+      ">
+        <b style="font-size:10px;">calendar</b>
+
+        <span id="calMonthLabel"
+          style="color:#9fc5e8; font-size:9px;">
+        </span>
+      </div>
+
+      <div id="calendarGrid" style="
+        display:grid;
+        grid-template-columns:repeat(7, 1fr);
+        gap:1px;
+        font-size:9px;
+        color:#9fc5e8;
+        text-align:center;
+      "></div>
+
+    </div>
+
+    <!-- TODO LIST -->
+    <div style="
+      flex:1;
+      min-width:140px;
+      margin-top:4px;
+      padding:6px;
+      border:1px solid #e3f2ff;
+      background:#ffffff;
+      font-size:10px;
+      color:#9fc5e8;
+      line-height:1.6;
+    ">
+
+      <div style="
+        color:#6fa8dc;
+        margin-bottom:4px;
+      ">
+        <b style="font-size:8px;">to do list</b>
+        </div>
+
+      ☐ make kana page（´∇｀''）<br>
+      ☐ draw jelly blog png, pfp art, mouse art<br>
+      ☐ add more unskippable music + debug site<br>
+      ☐ make website stamp maybe ( ╹ -╹)? 
+
+    </div>
+
+  </div>
+
+</div>
+
+        </div>
+
+      </div>
+
+      </div>
+      </div>
+
+    </div>
+
+    <!-- TAB 2 -->
+<div id="tab2" class="tab-content" style="
+  width:100%;
+  height:50em;
+  max-height:50em;
+
+  overflow-y:auto;
+  overflow-x:hidden;
+
+  padding:16px;
+
+  background:#ffffff;
+
+  /* seamless box */
+  border-left:1px solid #dceeff;
+  border-right:1px solid #dceeff;
+  border-bottom:1px solid #dceeff;
+  border-top:none;
+
+  box-sizing:border-box;
+
+  font-size:12px;
+  line-height:1.5;
+">
+
+  <p>[2026-07-13] debugging. adding gifs </p>
+  <p>[2026-07-12] debugging againnnnn</p>
+  <p>[2026-07-11] debugging and fixing some stuff</p>
+  <p>[2026-07-10] debugging</p>
+  <p>[2026-07-08] made more stamps to my about tab [i need to update my gallery ww T^T]</p>
+  <p>[2026-07-07] did basic clean up and updating [i did more in the last couple of days but i forgot to update this ww] </p>
+  <p>[2026-06-24] added some more website stamps !! so many cool sites out there ww. and also started designing the abt tab </p>
+  <p>[2026-05-25] changed song on profile to ギルティ・プレジャー・プレジャ / Guilty・Pleasure・Pleasure by Sick2</p>
+  <p>[2026-05-15] debugged the whole of about.html, started the fav.html, added underwater sounds </p>
+  <p>[2026-05-16] made the guestbook + debugged half of the about.html </p>
+  <p>[2026-05-15] guestbook concepts brainstormed/planned ; coolwebsites.exe,changelog scrollbars; changed crystal zombie to anemone by neth priere cain  </p>
+  <p>[2026-05-13] blog updated, more blinkies for my blinkies made :33 , debugged website</p>
+  <p>[2026-05-01 to 2026-05-12] blog, fav stuff cool website tab updated - forgot to log all this ww</p>
+  <p>[2026-04-30] favourite stuff page more songs added</p>
+  <p>[2026-04-27] about page tried and music,calendar,other stuff added</p>
+  <p>[2026-04-27] about page layout tried </p>
+  <p>[2026-04-26] trying to make the blinkies blue, making art for the website </p>
+  <p>[2026-04-25] changed all the blinkies to my custom ones yayyy o( >  ᗜ  < ) </p>
+  <p>[2026-04-24] debugging [i gave up on it ww T^T], resources page redid, added cool websites.exe :3</p>
+  <p>[2026-04-23] debugging again help me ww</p>
+  <p>[2026-04-22] debugging things aaaaa</p>
+  <p>[2026-04-18] music added to character page</p>
+  <p>[2026-04-17] added more blinkies and link page</p>
+  <p>[2026-04-16] blinkies added and resources done and favourite character page updated and tried to add 2 songs [oh its going so bad (ᵕ—ᴗ—)]</p>
+  <p>[2026-04-15] favourite character page fixed</p>
+  <p>[2026-04-13] game idea for game.sys trialed</p>
+  <p>[2026-04-12] home page, right panel [music.exe] on home page and 404 page added [for the pages i havent done], more blinkies wahhahaha</p>
+  <p>[2026-04-11] home page,blinkies [yes again] and right panel on home page yaaaayyy ヾ(•̀ ヮ <)و </p>
+  <p>[2026-04-10] home page blinkies and character page edited</p>
+  <p>[2026-04-09] site created and layout ଘ(੭ˊᵕˋ)੭ </p>
+
+</div>
+
+<style>
+#tab2::-webkit-scrollbar{
+  width:17px;
+}
+
+#tab2::-webkit-scrollbar-track{
+  background:#f7fbff;
+}
+
+#tab2::-webkit-scrollbar-thumb{
+  background:#c8d6fb;
+  border:1px solid #fff;
+  border-radius:2px;
+}
+
+</style>
+
+
+    <!-- TAB 3 -->
+    <div id="tab3" class="tab-content">
+    <div id="about-page">
+    <div class="top-grid">
+
+        <div class="cyber-box">
+            <div class="widget-header">status2.log</div>
+
+            <div class="widget-content">
+                ☐  playing :: pjsk <br>
+                ☐  listening :: sick2<br>
+                ☐  reading :: green yuri<br>
+                ☐  hyperfixation :: kanade<br>
+                ☐  last update :: 2026-07-15
+            </div>
+        </div>
+
+        <div class="cyber-box">
+        <div class="widget-header">why i made a site</div>
+        <div class="widget-content">
+
+                i rlly liked website making and i made a lot of caard/rentry etc. and i rlly wanted to make it more custom and then i discovered neocities when i was doom scrolling on pinterest www i believe the first one i saw was
+
+    <a href="https://yumejoshi.nekoweb.org/home" target="_blank" class="dream-link">
+    shu's site
+  </a>
+
+and i rlly wanted to learn to code after seeing their site. so i started learning !!
+                
+                my codes rlly bad ww but im learning hehe... DONT LOOK TO CLOSELY WW EVERYTHING IS FALLING APART ( ꩜ ᯅ ꩜;)⁭ ⁭
+                
+                hopefully one day i can code without having to read the w3schools page 8 times ww ... at least im not vibe coding [kill ai !!] ig im learning (•̀ᴗ•́ )و.and now i can yap and learn to code hehe <img src="https://file.garden/aeJQnJpyajBfOnje/cat535.gif" alt="nuko music"> 
+
+            </div>
+        </div>
+
+        <div class="cyber-box">
+            <div class="widget-header">fanlisting</div>
+
+            <div class="widget-content">
+
+                will attach the things later<br>
+                kanade<br>
+                haruka<br>
+                shiho<br>
+                ring<br>
+                pjsk<br>
+                memories1995<br>
+                vkei<br>
+                sick2<br>
+                neth priere cain
+
+            </div>
+        </div>
+
+    </div>
+
+    <div class="cyber-box">
+
+        <div class="widget-header">
+         even if the world is filled with despair...
+        </div>
+
+        <div class="stamp-marquee">
+            <div class="stamp-track">
+
+                <img src="https://file.garden/aeJQnJpyajBfOnje/Untitled190_20260625180010.PNG">
+                <img src="https://file.garden/aeJQnJpyajBfOnje/himejoshi.PNG">
+                <img src="https://file.garden/aeJQnJpyajBfOnje/Untitled190_20260625182446.PNG">
+                <img src="https://file.garden/aeJQnJpyajBfOnje/Untitled190_20260625182909.PNG">
+                <img src="https://file.garden/aeJQnJpyajBfOnje/Untitled190_20260625182618.PNG">
+                <img src="https://file.garden/aeJQnJpyajBfOnje/Untitled190_20260625184148.PNG">
+                <img src="https://file.garden/aeJQnJpyajBfOnje/for%20life!!.PNG">
+                <img src="https://file.garden/aeJQnJpyajBfOnje/Untitled190_20260625184211.PNG">
+                <img src="https://file.garden/aeJQnJpyajBfOnje/Untitled190_20260625185820.PNG">
+                <img src="https://file.garden/aeJQnJpyajBfOnje/Untitled190_20260625185653.PNG">
+                <img src="https://file.garden/aeJQnJpyajBfOnje/Untitled190_20260625180010.PNG">
+                <img src="https://file.garden/aeJQnJpyajBfOnje/himejoshi.PNG">
+                <img src="https://file.garden/aeJQnJpyajBfOnje/Untitled190_20260625182446.PNG">
+                <img src="https://file.garden/aeJQnJpyajBfOnje/Untitled190_20260625182909.PNG">
+                <img src="https://file.garden/aeJQnJpyajBfOnje/Untitled190_20260625182618.PNG">
+                <img src="https://file.garden/aeJQnJpyajBfOnje/Untitled190_20260625184148.PNG">
+                <img src="https://file.garden/aeJQnJpyajBfOnje/for%20life!!.PNG">
+                <img src="https://file.garden/aeJQnJpyajBfOnje/Untitled190_20260625184211.PNG">
+                <img src="https://file.garden/aeJQnJpyajBfOnje/Untitled190_20260625185820.PNG">
+                <img src="https://file.garden/aeJQnJpyajBfOnje/Untitled190_20260625185653.PNG">
+
+
+                <img src="https://file.garden/aeJQnJpyajBfOnje/Untitled190_20260625180010.PNG">
+                <img src="https://file.garden/aeJQnJpyajBfOnje/himejoshi.PNG">
+                <img src="https://file.garden/aeJQnJpyajBfOnje/Untitled190_20260625182446.PNG">
+                <img src="https://file.garden/aeJQnJpyajBfOnje/Untitled190_20260625182909.PNG">
+                <img src="https://file.garden/aeJQnJpyajBfOnje/Untitled190_20260625182618.PNG">
+                <img src="https://file.garden/aeJQnJpyajBfOnje/Untitled190_20260625184148.PNG">
+                <img src="https://file.garden/aeJQnJpyajBfOnje/for%20life!!.PNG">
+                <img src="https://file.garden/aeJQnJpyajBfOnje/Untitled190_20260625184211.PNG">
+                <img src="https://file.garden/aeJQnJpyajBfOnje/Untitled190_20260625185820.PNG">
+                <img src="https://file.garden/aeJQnJpyajBfOnje/Untitled190_20260625185653.PNG">
+                <img src="https://file.garden/aeJQnJpyajBfOnje/Untitled190_20260625180010.PNG">
+                <img src="https://file.garden/aeJQnJpyajBfOnje/himejoshi.PNG">
+                <img src="https://file.garden/aeJQnJpyajBfOnje/Untitled190_20260625182446.PNG">
+                <img src="https://file.garden/aeJQnJpyajBfOnje/Untitled190_20260625182909.PNG">
+                <img src="https://file.garden/aeJQnJpyajBfOnje/Untitled190_20260625182618.PNG">
+                <img src="https://file.garden/aeJQnJpyajBfOnje/Untitled190_20260625184148.PNG">
+                <img src="https://file.garden/aeJQnJpyajBfOnje/for%20life!!.PNG">
+                <img src="https://file.garden/aeJQnJpyajBfOnje/Untitled190_20260625184211.PNG">
+                <img src="https://file.garden/aeJQnJpyajBfOnje/Untitled190_20260625185820.PNG">
+                <img src="https://file.garden/aeJQnJpyajBfOnje/Untitled190_20260625185653.PNG">
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="cyber-box gallery-box">
+
+         <div class="widget-header">
+         if there's even one person who needs my music, i'll keep writing it
+        </div>
+           <div class="stamp-marquee">
+            <div class="stamp-track">
+
+                <img src="https://file.garden/aeJQnJpyajBfOnje/Untitled248_20260708191030.PNG">
+                <img src="https://file.garden/aeJQnJpyajBfOnje/Untitled248_20260708190236.PNG">
+                <img src="https://file.garden/aeJQnJpyajBfOnje/Untitled248_20260708190612.PNG">
+                <img src="https://file.garden/aeJQnJpyajBfOnje/Untitled248_20260708191641.PNG">
+                <img src="https://file.garden/aeJQnJpyajBfOnje/Untitled248_20260708191424.PNG">
+                <img src="https://file.garden/aeJQnJpyajBfOnje/Untitled248_20260708191217.PNG">
+                <img src="https://file.garden/aeJQnJpyajBfOnje/Untitled248_20260708191654.PNG">
+                <img src="https://file.garden/aeJQnJpyajBfOnje/Untitled248_20260708192534.PNG">
+
+
+                <img src="https://file.garden/aeJQnJpyajBfOnje/Untitled248_20260708191030.PNG">
+                <img src="https://file.garden/aeJQnJpyajBfOnje/Untitled248_20260708190236.PNG">
+                <img src="https://file.garden/aeJQnJpyajBfOnje/Untitled248_20260708190612.PNG">
+                <img src="https://file.garden/aeJQnJpyajBfOnje/Untitled248_20260708191641.PNG">
+                <img src="https://file.garden/aeJQnJpyajBfOnje/Untitled248_20260708191424.PNG">
+                <img src="https://file.garden/aeJQnJpyajBfOnje/Untitled248_20260708191217.PNG">
+                <img src="https://file.garden/aeJQnJpyajBfOnje/Untitled248_20260708191654.PNG">
+                <img src="https://file.garden/aeJQnJpyajBfOnje/Untitled248_20260708192534.PNG">
+
+            </div>
+
+        </div>
+        </div>
+        <p> im editing stuff here rn ignore how messy it is ww</p>
+       <!-- ===== WIDGET SECTION ===== -->
+
+<div class="desktop-section">
+
+    <!-- LEFT : GIFYPET -->
+
+    <div class="window gifypet-window">
+
+        <div class="window-title">
+            gifypet.exe
+        </div>
+
+        <div class="window-content">
+
+            <iframe
+                width="400"
+                height="400"
+                scrolling="no"
+                src="https://gify.pet/pet/pet.html?name=kanade&dob=1783618148&gender=f&element=Water&pet=https%3A%2F%2Ffile.garden%2FaeJQnJpyajBfOnje%2Fanimated%2520(2).gif&map=https%3A%2F%2Fimages.steamusercontent.com%2Fugc%2F1732217195749470808%2F5A182830173E61E7B5CC7AC29375D2DEF79B39D6%2F%3Fimw%3D512%26%26ima%3Dfit%26impolicy%3DLetterbox%26imcolor%3D%2523000000%26letterbox%3Dfalse&background=&tablecolor=%2371d7f9&textcolor=%2330bcf8"
+                frameborder="5">
+            </iframe>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- MIDDLE COLUMN -->
+
+    <div class="middle-column">
+
+        <!-- FLAG COUNTER -->
+
+        <div class="window flag-window">
+
+            <div class="window-title">
+                flags.dat
+            </div>
+
+            <div class="window-content">
+
+                <a href="https://info.flagcounter.com/d0Pb">
+                    <img src="https://s01.flagcounter.com/count/d0Pb/bg_FFFFFF/txt_557AA6/border_009CCC/columns_2/maxflags_10/viewers_0/labels_0/pageviews_1/flags_0/percent_0/" alt="Flag Counter">
+                </a>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- SONG -->
+
+        <div class="window song-window">
+
+            <div class="window-title">
+                song_of_the_week.mp3
+            </div>
+
+            <div class="window-content">
+
+                <img
+                    class="album-cover"
+                    src="https://file.garden/aeJQnJpyajBfOnje/0x1900-000000-80-0-0.jpg">
+
+                <h3><a href="https://www.youtube.com/watch?v=vlwtSuW8_A0" target="_blank" rel="noopener noreferrer">ur so awful</a></h3>
+
+                <p>disoc8 and luvwillow</p>
+
+                <span class="obsession">
+                    hehehehe its so goooood
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- POLL -->
+
+    <div class="window poll-window">
+
+        <div class="window-title">
+            poll.exe
+        </div>
+
+        <div class="window-content">
+
+            <!-- make a super cool poll me in the future  -->
+
+            <iframe
+                src="YOUR_POLL_URL"
+                width="100%"
+                height="340"
+                frameborder="0">
+            </iframe>
+
+        </div>
+
+    </div>
+
+</div>
+</div>
+
+
+
+<!-- STATUS + CBOX ROW -->
+
+<div class="bottom-row">
+
+    <!-- STATUS -->
+
+    <div class="window status-window">
+
+        <div class="window-title">
+            status.log
+        </div>
+
+        <div class="window-content">
+
+
+            <div id="statuscafe">
+                loading...
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- CBOX BUTTON -->
+
+    <div class="window messages-window">
+
+    <div class="window-title">
+        messages.exe
+    </div>
+
+    <div class="window-content">
+
+        <p class="chat-desc">
+            leave a message.. so i can stalk youuuuu [nicely]<br>
+            thank you for visiting my site<br>
+            baiii beingsss !!
+        </p>
+
+        <iframe
+            src="https://www5.cbox.ws/box/?boxid=964553&boxtag=N9MIAa"
+            width="100%"
+            height="320"
+            frameborder="0"
+            scrolling="auto">
+        </iframe>
+
+       </div>
+
+</div> <!-- bottom-row -->
+</div> <!-- desktop-section -->
+</div> <!-- about-page -->
+</div> <!-- tab3 -->
+  
+
+    <!-- ===== TAB 4 ===== -->
+
+    <div id="tab4" class="tab-content">
+
+      <!-- ===== GUESTBOOK ===== -->
+
+      <div id="guestbook-container">
+
+        <iframe
+          src="https://users3.smartgb.com/g/g.php?a=s&i=g36-41346-3a"
+          id="cyberbook">
+        </iframe>
+
+      </div>
+
+      <!-- ===== PASSWORD OVERLAY ===== -->
+
+      <div id="cyber-overlay">
+
+        <!-- WINDOW HEADER -->
+        <div class="overlay-header">
+
+          <span class="overlay-dot"></span>
+          <span class="overlay-dot"></span>
+          <span class="overlay-dot"></span>
+
+          <div class="overlay-header-title">
+            jelly_security.exe
+          </div>
+
+        </div>
+
+        <!-- WINDOW -->
+        <div class="overlay-window">
+
+          <div class="overlay-title">
+            hint : click kanade .ᐟ 
+          </div>
+
+          <!-- INPUT -->
+          <div class="fake-input">
+
+            <span class="prompt">
+              password://
+            </span>
+
+            <input
+              type="password"
+              id="password-input"
+              placeholder="enter password..."
+            >
+
+          </div>
+
+          <!-- BUTTON -->
+          <button onclick="checkPassword()">
+            ENTER
+          </button>
+
+          <!-- WRONG -->
+          <div id="wrong-password">
+            access denied . . . sorry
+          </div>
+
+          <!-- GIF -->
+          <img
+            src="https://file.garden/aeJQnJpyajBfOnje/animated.gif"
+            id="hint-gif"
+            onclick="copyPassword()"
+          >
+
+        </div>
+
+      </div>
+
+    </div>
+
+<style>
+
+/* ===== TAB4 ===== */
+
+#tab4{
+  position:relative;
+}
+
+/* ===== GUESTBOOK ===== */
+
+#tab4 #guestbook-container{
+  width:100%;
+  height:700px;
+
+  position:relative;
+
+  overflow:hidden;
+
+  border-radius:18px;
+
+  background:
+    linear-gradient(
+      to bottom,
+      #eefbff,
+      #d8f3ff
+    );
+
+  border:2px solid #bdeeff;
+
+  box-shadow:
+    0 0 25px rgba(180,235,255,0.8),
+    inset 0 0 25px rgba(255,255,255,0.95);
+}
+
+/* ===== IFRAME ===== */
+
+#tab4 #cyberbook{
+  width:100%;
+  height:100%;
+
+  border:none;
+
+  background:white;
+
+  opacity:0.92;
+
+  filter:
+    hue-rotate(165deg)
+    saturate(0.55)
+    brightness(1.1)
+    contrast(0.94);
+}
+
+/* ===== OVERLAY ===== */
+
+#tab4 #cyber-overlay{
+  position:absolute;
+
+  inset:0;
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
+  flex-direction:column;
+
+  background:
+    rgba(235,249,255,0.42);
+
+  backdrop-filter:
+    blur(10px)
+    brightness(1.05);
+
+  z-index:999;
+}
+
+/* ===== OVERLAY HEADER ===== */
+
+#tab4 .overlay-header{
+  width:430px;
+  height:38px;
+
+  display:flex;
+  align-items:center;
+
+  gap:7px;
+
+  padding:0 12px;
+
+  box-sizing:border-box;
+
+  border-radius:14px 14px 0 0;
+
+  background:
+    linear-gradient(
+      to right,
+      #dff6ff,
+      #f4fcff,
+      #d8f3ff
+    );
+
+  border:
+    1px solid #bdeeff;
+
+  border-bottom:none;
+
+  box-shadow:
+    inset 0 -1px 10px rgba(255,255,255,0.95);
+}
+
+#tab4 .overlay-dot{
+  width:10px;
+  height:10px;
+
+  border-radius:50%;
+
+  background:white;
+
+  border:1px solid #9edfff;
+
+  box-shadow:
+    0 0 8px #d5f5ff;
+}
+
+#tab4 .overlay-header-title{
+  margin-left:10px;
+
+  color:#67b4dd;
+
+  font-size:12px;
+
+  letter-spacing:2px;
+
+  text-shadow:
+    0 0 6px white,
+    0 0 10px #bdefff;
+}
+
+/* ===== WINDOW ===== */
+
+#tab4 .overlay-window{
+  width:430px;
+
+  position:relative;
+
+  overflow:visible;
+
+  padding:28px;
+  padding-bottom:80px;
+
+  box-sizing:border-box;
+
+  border-radius:
+    0 0 16px 16px;
+
+  text-align:center;
+
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(255,255,255,0.93),
+      rgba(220,243,255,0.86)
+    );
+
+  border:
+    1px solid #b8ebff;
+
+  box-shadow:
+    0 0 25px rgba(180,235,255,0.9),
+    inset 0 0 18px rgba(255,255,255,1);
+}
+
+/* ===== TITLE ===== */
+
+#tab4 .overlay-title{
+  color:#72bbe2;
+
+  font-size:13px;
+
+  letter-spacing:2px;
+
+  margin-bottom:20px;
+
+  text-shadow:
+    0 0 10px #dff7ff;
+}
+
+/* ===== INPUT ===== */
+
+#tab4 .fake-input{
+  width:100%;
+
+  box-sizing:border-box;
+
+  padding:12px;
+
+  margin-bottom:18px;
+
+  border-radius:10px;
+
+  text-align:left;
+
+  background:
+    rgba(255,255,255,0.75);
+
+  border:1px solid #bcecff;
+
+  box-shadow:
+    inset 0 0 10px rgba(255,255,255,1);
+}
+
+#tab4 .prompt{
+  color:#7fd1ff;
+
+  margin-right:6px;
+}
+
+#tab4 #password-input{
+  width:68%;
+
+  border:none;
+
+  outline:none;
+
+  background:transparent;
+
+  color:#63add5;
+
+  font-family:"MS PGothic", monospace;
+}
+
+/* ===== BUTTON ===== */
+
+#tab4 button{
+  padding:10px 20px;
+
+  border-radius:10px;
+
+  cursor:pointer;
+
+  border:1px solid #aee7ff;
+
+  color:#67b2db;
+
+  font-family:"MS PGothic", monospace;
+
+  letter-spacing:1px;
+
+  background:
+    linear-gradient(
+      to bottom,
+      #f7fdff,
+      #d6f2ff
+    );
+
+  box-shadow:
+    0 0 12px rgba(180,235,255,0.8);
+
+  transition:0.2s;
+}
+
+#tab4 button:hover{
+  transform:translateY(-2px);
+}
+
+/* ===== WRONG ===== */
+
+#tab4 #wrong-password{
+  display:none;
+
+  margin-top:14px;
+
+  color:#7db7d6;
+
+  font-size:11px;
+
+  letter-spacing:1px;
+}
+
+/* ===== GIF ===== */
+
+#tab4 #hint-gif{
+  position:absolute;
+
+  width:135px;
+
+  left:50%;
+  bottom:-48px;
+
+  transform:translateX(-50%);
+
+  cursor:pointer;
+
+  image-rendering:pixelated;
+
+  filter:
+    drop-shadow(0 0 14px #c9f2ff);
+
+  transition:0.2s;
+}
+
+#tab4 #hint-gif:hover{
+  transform:
+    translateX(-50%)
+    scale(1.06);
+}
+
+</style>
+
+<script>
+
+/* ===== PASSWORD ===== */
+
+function checkPassword(){
+
+  let password =
+    document
+    .getElementById("password-input")
+    .value
+    .toLowerCase();
+
+  if(password === "kanade"){
+
+    document
+      .getElementById("cyber-overlay")
+      .style.display = "none";
+
+  }
+
+  else{
+
+    document
+      .getElementById("wrong-password")
+      .style.display = "block";
+
+  }
+
+}
+
+/* ===== COPY PASSWORD ===== */
+
+function copyPassword(){
+
+  navigator
+    .clipboard
+    .writeText("kanade");
+
+}
+
+</script>
+
+</div> <!-- content -->
+
+
+<!-- RIGHT PANEL -->
+<div id="rightbar">
+
+  <div class="window">
+    <div class="window-header">music.exe</div>
+
+    <p style="font-size:13px;">Now Playing: anemone</p>
+
+    <iframe src="https://www.youtube.com/embed/PeXmJtsiKJE?si=3q46YgGJeznLe6-8"
+      frameborder="0"
+      allowfullscreen>
+    </iframe>
+  </div>
+
+  <div class="window">
+
+    <div class="window-header">jelly's_gallery.lnk</div>
+
+    <span id="news" style="font-size:10px;"></span>
+
+<script type="text/javascript">
+var news = Array(
+  "C2U if you decide to use it ww ᜊ( ' ⩊ '𖦹)ᜊ",
+  "i make these on procreate they are fun to do 𐔌՞. .՞𐦯",
+  "why are these breaking my site aaaa... or is it just my bad code "
+);
+
+var cursor = "➤";
+var delay = 120;
+
+var newsp, cursp, flash, item = 0;
+
+if (typeof(addRVLoadEvent) != 'function') {
+  function addRVLoadEvent(funky) {
+    var oldonload = window.onload;
+    if (typeof(oldonload) != 'function') window.onload = funky;
+    else window.onload = function() {
+      if (oldonload) oldonload();
+      funky();
+    }
+  }
+}
+
+addRVLoadEvent(teleprint);
+
+function teleprint() {
+  if (document.getElementById) {
+    var span = document.getElementById("news");
+    while (span.childNodes.length) span.removeChild(span.childNodes[0]);
+
+    delay *= 1000;
+
+    newsp = document.createElement("span");
+    cursp = document.createElement("span");
+
+    cursp.appendChild(document.createTextNode(String.fromCharCode(160) + cursor));
+
+    span.appendChild(newsp);
+    span.appendChild(cursp);
+
+    ticker();
+  }
+}
+
+function ticker() {
+  var i;
+
+  while (newsp.childNodes.length)
+    newsp.removeChild(newsp.childNodes[0]);
+
+  newsp.appendChild(document.createTextNode(news[item].substring(0, 1)));
+
+  for (i = 1; i < news[item].length; i++) {
+    setTimeout(
+      'newsp.firstChild.nodeValue="' + news[item].substring(0, i + 1) + '"',
+      100 * i
+    );
+  }
+
+  if (news[item].indexOf("www") != -1)
+    setTimeout('linkit(' + item + ')', 100 * i);
+
+  setTimeout(
+    'flash=setInterval("cursp.style.visibility=(cursp.style.visibility==\\\'visible\\\')?\\\'hidden\\\':\\\'visible\\\'",234)',
+    100 * i
+  );
+
+  setTimeout('clearInterval(flash)', delay);
+  setTimeout('cursp.style.visibility="visible"', delay);
+  setTimeout('ticker()', delay);
+
+  item = ++item % news.length;
+}
+
+function linkit(q) {
+  var a, p, e, l;
+
+  p = news[q].indexOf("www");
+  e = news[q].indexOf(" ", p);
+  if (e == -1) e = news[q].length;
+
+  l = news[q].substring(p, e);
+
+  while (newsp.childNodes.length)
+    newsp.removeChild(newsp.childNodes[0]);
+
+  newsp.appendChild(document.createTextNode(news[q].substring(0, p)));
+
+  a = document.createElement("a");
+  a.href = "http://" + l;
+  a.appendChild(document.createTextNode(l));
+
+  newsp.appendChild(a);
+  newsp.appendChild(document.createTextNode(news[q].substring(e)));
+}
+</script>
+
+    <div class="blinkie-box">
+      <img src="https://file.garden/aeJQnJpyajBfOnje/ring%20tan.GIF" class="blinkie">
+      <img src="https://file.garden/aeJQnJpyajBfOnje/haruka_blinkee_.gif" class="blinkie">
+      <img src="https://file.garden/aeJQnJpyajBfOnje/2000_zeze_blinkee_%202.gif" class="blinkie">
+      <img src="website-stamps/kanade_blinkte.gif" class="blinkie">
+      <img src="https://file.garden/aeJQnJpyajBfOnje/2000_zeze_blinkee_%204.gif" class="blinkie">
+      <img src="website-stamps/carnation_recollection.gif" class="blinkie">
+      <img src="https://file.garden/aeJQnJpyajBfOnje/2000_zeze_blinkee_%203.gif" class="blinkie">
+    </div>
+
+  </div>
+
+</div>
+
+</div>
+
+<script>
+function openTab(tabId, element) {
+  let tabs = document.querySelectorAll(".tab-content");
+  let buttons = document.querySelectorAll(".tab-button");
+
+  tabs.forEach(t => t.classList.remove("active"));
+  buttons.forEach(b => b.classList.remove("active"));
+
+  document.getElementById(tabId).classList.add("active");
+  element.classList.add("active");
+}
+
+function playMusic() {
+  document.getElementById('music').play();
+  alert("these feelings arent real dont worry im not real either shhh ´ཀ` ");
+}
+
+function stopMusic() {
+  const music = document.getElementById('music');
+  music.pause();
+  music.currentTime = 0;
+}
+
+function buildCalendar() {
+  const grid = document.getElementById("calendarGrid");
+  const label = document.getElementById("calMonthLabel");
+
+  if (!grid || !label) return;
+
+  grid.innerHTML = "";
+
+  const now = new Date();
+  const year = now.getFullYear();
+  const month = now.getMonth();
+  const today = now.getDate();
+
+  const monthNames = [
+    "Jan","Feb","Mar","Apr","May","Jun",
+    "Jul","Aug","Sep","Oct","Nov","Dec"
+  ];
+
+  label.textContent = `${monthNames[month]} ${year}`;
+
+  const firstDay = (new Date(year, month, 1).getDay() + 6) % 7;
+  const daysInMonth = new Date(year, month + 1, 0).getDate();
+
+  const days = ["M","T","W","T","F","S","S"];
+
+  days.forEach(d => {
+    const el = document.createElement("div");
+    el.textContent = d;
+    el.style.color = "#6fa8dc";
+    el.style.fontSize = "8px";
+    grid.appendChild(el);
+  });
+
+  for (let i = 0; i < firstDay; i++) {
+    const empty = document.createElement("div");
+    grid.appendChild(empty);
+  }
+
+  for (let d = 1; d <= daysInMonth; d++) {
+    const cell = document.createElement("div");
+    cell.textContent = d;
+    cell.style.padding = "1px 0";
+
+    if (d === today) {
+      cell.style.background = "#e3f2ff";
+      cell.style.border = "1px solid #cfe8ff";
+      cell.style.color = "#6fa8dc";
+    }
+
+    grid.appendChild(cell);
+  }
+}
+
+document.addEventListener("DOMContentLoaded", buildCalendar);
+</script>
+
+</body>
+</html>

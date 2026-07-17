@@ -1,0 +1,473 @@
+/* =======================================================
+  yuriiii for liffeeee
+======================================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+:root{
+
+--bg:#ffffff;
+
+--window:#ffffff;
+
+--header1:#f9fcff;
+
+--header2:#edf6ff;
+
+--border:#cfe5ff;
+
+--border-dark:#a7ceff;
+
+--shadow:#edf6ff;
+
+--text:#6fa5ef;
+
+--title:#5d99ee;
+
+--hover:#f5faff;
+
+}
+
+
+
+.desktop-section{
+
+display:grid;
+
+grid-template-columns:330px 230px 1fr;
+
+gap:18px;
+
+align-items:start;
+
+margin-top:20px;
+
+}
+
+
+
+.middle-column{
+
+display:flex;
+
+flex-direction:column;
+
+gap:18px;
+
+}
+
+
+
+.bottom-row{
+
+display:grid;
+
+grid-template-columns:1fr 260px;
+
+gap:18px;
+
+margin-top:18px;
+
+}
+
+
+
+.window{
+
+background:var(--window);
+
+border:2px solid var(--border-dark);
+
+box-shadow:
+0 0 0 4px var(--shadow),
+0 0 15px rgba(180,210,255,.25);
+
+overflow:hidden;
+
+transition:.25s;
+
+}
+
+
+
+.window:hover{
+
+transform:translateY(-2px);
+
+box-shadow:
+0 0 0 4px #f3f9ff,
+0 6px 18px rgba(170,205,255,.25);
+
+}
+
+
+
+.window-title{
+
+background:linear-gradient(var(--header1),var(--header2));
+
+border-bottom:2px solid var(--border);
+
+padding:7px 10px;
+
+font-family:"MS PGothic","VT323",monospace;
+
+font-size:17px;
+
+letter-spacing:.5px;
+
+color:var(--title);
+
+user-select:none;
+
+}
+
+
+
+.window-content{
+
+padding:12px;
+
+background:#fff;
+
+font-family:"MS PGothic";
+
+font-size:12px;
+
+color:var(--text);
+
+line-height:1.6;
+
+}
+
+
+
+/* =======================================================
+
+GIFYPET
+
+======================================================= */
+
+.gifypet-window iframe{
+
+display:block;
+
+margin:auto;
+
+border:none;
+
+}
+
+
+
+/* =======================================================
+
+FLAG
+
+======================================================= */
+
+.flag-window{
+
+text-align:center;
+
+}
+
+.flag-window img{
+
+max-width:100%;
+
+}
+
+
+
+/* =======================================================
+
+SONG
+
+======================================================= */
+
+.song-window{
+
+text-align:center;
+
+}
+
+
+
+.album-cover{
+
+width:120px;
+
+border:2px solid var(--border);
+
+padding:4px;
+
+background:white;
+
+margin-bottom:10px;
+
+}
+
+
+
+.song-window h3{
+
+margin:0;
+
+font-weight:normal;
+
+font-size:18px;
+
+font-family:"VT323";
+
+color:var(--title);
+
+}
+
+
+
+.song-window p{
+
+margin:4px 0;
+
+font-size:12px;
+
+}
+
+
+
+.obsession{
+
+display:inline-block;
+
+margin-top:10px;
+
+padding:4px 8px;
+
+border:1px dashed var(--border-dark);
+
+background:#f7fbff;
+
+}
+
+
+
+/* =======================================================
+
+POLL
+
+======================================================= */
+
+.poll-window iframe{
+
+width:100%;
+
+height:360px;
+
+border:none;
+
+background:white;
+
+}
+
+
+
+/* =======================================================
+
+STATUS
+
+======================================================= */
+
+.status-window{
+
+min-height:110px;
+
+}
+
+
+
+.status-window .window-content{
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+text-align:center;
+
+font-size:13px;
+
+}
+
+
+
+/* =======================================================
+
+BUTTONS
+
+======================================================= */
+
+button{
+
+background:linear-gradient(#ffffff,#eef7ff);
+
+border:2px solid var(--border-dark);
+
+padding:6px 14px;
+
+font-family:"MS PGothic";
+
+font-size:12px;
+
+color:var(--title);
+
+cursor:pointer;
+
+transition:.2s;
+
+}
+
+
+
+button:hover{
+
+background:#f6fbff;
+
+transform:translateY(-1px);
+
+}
+
+
+
+/* =======================================================
+
+SCROLLBARS
+
+======================================================= */
+
+::-webkit-scrollbar{
+
+width:10px;
+
+height:10px;
+
+}
+
+
+
+::-webkit-scrollbar-track{
+
+background:#f5faff;
+
+border-left:1px solid var(--border);
+
+}
+
+
+
+::-webkit-scrollbar-thumb{
+
+background:#c8e2ff;
+
+border:2px solid white;
+
+}
+
+
+
+::-webkit-scrollbar-thumb:hover{
+
+background:#b5d7ff;
+
+}
+
+
+
+/* =======================================================
+
+LINKS
+
+======================================================= */
+
+a{
+
+color:#74aaf5;
+
+text-decoration:none;
+
+}
+
+a:hover{
+
+text-decoration:underline;
+
+}
+
+
+
+/* =======================================================
+
+LITTLE SPARKLE ANIMATION
+
+======================================================= */
+
+.window{
+
+animation:fadeUp .4s ease;
+
+}
+
+
+
+@keyframes fadeUp{
+
+from{
+
+opacity:0;
+
+transform:translateY(12px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:none;
+
+}
+
+}
+
+/* ===========================
+   ABOUT TAB SCROLL
+=========================== */
+
+#tab3{
+    height:calc(100vh - 175px); /* adjust if needed */
+    overflow-y:auto;
+    overflow-x:hidden;
+}
+
+/* custom scrollbar */
+
+#tab3::-webkit-scrollbar{
+    width:17px;
+}
+
+#tab3::-webkit-scrollbar-track{
+    background:#f7fbff;
+}
+
+#tab3::-webkit-scrollbar-thumb{
+    background:#c8d6fb;
+    border:1px solid #fff;
+    border-radius:2px;
+}
+
+#tab3::-webkit-scrollbar-button{
+    display:none;
+    width:0;
+    height:0;
+}
